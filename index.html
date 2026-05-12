@@ -408,6 +408,25 @@
   .trim.wilderness .inv-link, .trim.flagship .inv-link { color: var(--blue-deep); }
   .trim.wilderness .inv-link:hover, .trim.flagship .inv-link:hover { color: var(--ink); }
 
+  /* Fixed-height slots so every card aligns row-by-row regardless of content */
+  .trim .engine-row { min-height: 40px; }
+  .trim .name {
+    min-height: 2.4em;
+  }
+  .trim .equip {
+    min-height: 6.2em;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .trim .inv-link span[aria-hidden] { margin-left: auto; flex-shrink: 0; }
+  .trim .inv-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   /* ---------- Inline price links to live inventory ---------- */
   a.price-link {
     color: inherit;
@@ -1264,38 +1283,38 @@
           <article class="trim">
             <div class="engine-row"><span class="engine">152 hp</span><span class="badge">2.0L · Crosstrek</span></div>
             <h4 class="name">Crosstrek 2.0L</h4>
-            <p class="equip">Roughly 152 hp, 145 lb-ft [PENDING 2026 MY]. Available on Base and Premium trims. Lightest powertrain in the comparison and the highest-mileage non-hybrid option.</p>
-            <a class="inv-link" href="/inventory/new/subaru/crosstrek" aria-label="See Crosstrek inventory">See Crosstrek inventory <span aria-hidden="true">→</span></a>
+            <p class="equip">Roughly 152 hp, 145 lb-ft [PENDING]. Available on Base and Premium. Highest-mileage non-hybrid option.</p>
+            <a class="inv-link" href="/inventory/new/subaru/crosstrek" aria-label="See Crosstrek inventory"><span>Crosstrek inventory</span> <span aria-hidden="true">→</span></a>
           </article>
           <article class="trim wilderness">
             <div class="engine-row"><span class="engine">3,500 lb</span><span class="badge">Crosstrek Wilderness</span></div>
-            <h4 class="name">Crosstrek Wilderness tow</h4>
-            <p class="equip">3,500-lb tow rating on Crosstrek Wilderness [PENDING 2026 MY], the highest tow figure in this comparison. Daily-driver footprint, occasional-trailer headroom.</p>
-            <a class="inv-link" href="https://www.subaru.com/" aria-label="Read about Crosstrek Wilderness">Read about Crosstrek Wilderness <span aria-hidden="true">→</span></a>
+            <h4 class="name">Crosstrek Wilderness</h4>
+            <p class="equip">3,500-lb tow rating [PENDING], the highest in the comparison. Daily-driver footprint, trailer headroom.</p>
+            <a class="inv-link" href="https://www.subaru.com/" aria-label="See Wilderness lineup"><span>Wilderness lineup</span> <span aria-hidden="true">→</span></a>
           </article>
           <article class="trim">
             <div class="engine-row"><span class="engine">182 hp</span><span class="badge">2.5L · Crosstrek</span></div>
             <h4 class="name">Crosstrek 2.5L</h4>
-            <p class="equip">Roughly 182 hp, 178 lb-ft [PENDING]. Standard on Sport, Limited, and Wilderness. Closes most of the elevation-loss gap you feel from Prescott's 5,400-foot altitude.</p>
-            <a class="inv-link" href="/inventory/new/subaru/crosstrek" aria-label="See Crosstrek inventory">See Crosstrek inventory <span aria-hidden="true">→</span></a>
+            <p class="equip">Roughly 182 hp, 178 lb-ft [PENDING]. Standard on Sport, Limited, Wilderness. Closes the 5,400-ft elevation gap.</p>
+            <a class="inv-link" href="/inventory/new/subaru/crosstrek" aria-label="See Crosstrek inventory"><span>Crosstrek inventory</span> <span aria-hidden="true">→</span></a>
           </article>
           <article class="trim">
             <div class="engine-row"><span class="engine">180 hp</span><span class="badge">2.5L · Forester</span></div>
             <h4 class="name">Forester 2.5L</h4>
-            <p class="equip">Roughly 180 hp, 178 lb-ft [PENDING]. Standard across the Forester lineup. Slightly higher torque at low rpm makes the daily climb less noticeable than in the Crosstrek 2.0L.</p>
-            <a class="inv-link" href="/inventory/new/subaru/forester" aria-label="See Forester inventory">See Forester inventory <span aria-hidden="true">→</span></a>
+            <p class="equip">Roughly 180 hp, 178 lb-ft [PENDING]. Standard across the lineup. Higher low-rpm torque eases the daily climb.</p>
+            <a class="inv-link" href="/inventory/new/subaru/forester" aria-label="See Forester inventory"><span>Forester inventory</span> <span aria-hidden="true">→</span></a>
           </article>
           <article class="trim flagship">
             <div class="engine-row"><span class="engine">X-MODE</span><span class="badge">Both · Wilderness</span></div>
             <h4 class="name">Dual-function X-MODE</h4>
-            <p class="equip">Snow/Dirt and Deep Snow/Mud retune throttle, transmission, and brake-based torque vectoring for low-traction surfaces. Standard on Wilderness, available on higher trims of both Crosstrek and Forester.</p>
-            <a class="inv-link" href="https://www.subaru.com/engineering/eyesight.html" aria-label="Read about Symmetrical AWD">Read about Symmetrical AWD <span aria-hidden="true">→</span></a>
+            <p class="equip">Snow/Dirt and Deep Snow/Mud retune throttle and torque for low-traction surfaces.</p>
+            <a class="inv-link" href="https://www.subaru.com/engineering/eyesight.html" aria-label="Read about Symmetrical AWD"><span>Symmetrical AWD</span> <span aria-hidden="true">→</span></a>
           </article>
           <article class="trim">
             <div class="engine-row"><span class="engine">3,000 lb</span><span class="badge">Forester Wilderness</span></div>
-            <h4 class="name">Forester Wilderness tow</h4>
-            <p class="equip">3,000-lb tow rating on Forester Wilderness [PENDING 2026 MY]. Larger interior volume than Crosstrek; the more flexible package for a quiet week at an RV park near Mormon Lake or Lake Mary.</p>
-            <a class="inv-link" href="tel:+19284912260" aria-label="Call sales">Call sales · 928-491-2260 <span aria-hidden="true">→</span></a>
+            <h4 class="name">Forester Wilderness</h4>
+            <p class="equip">3,000-lb tow rating [PENDING]. Larger interior than Crosstrek; the more flexible package for RV trips.</p>
+            <a class="inv-link" href="tel:+19284912260" aria-label="Call sales"><span>Call 928-491-2260</span> <span aria-hidden="true">→</span></a>
           </article>
         </div>
 
@@ -1323,18 +1342,6 @@
 
         <h3>Infotainment.</h3>
         <p>Crosstrek base trims ship with dual 7-inch displays; higher Crosstrek trims add the 11.6-inch portrait touchscreen. Forester ships with the 11.6-inch portrait touchscreen standard on Premium and above [PENDING: confirm 2026 MY base-trim infotainment on both vehicles]. Both support wireless Apple CarPlay and Android Auto on the 11.6-inch system [PENDING: confirm wireless vs wired by trim for 2026 MY], over-the-air software updates on the 11.6-inch system, and SiriusXM and HD Radio. Higher trims on both add a Harman Kardon premium audio system.</p>
-
-        <figure class="full-img" aria-labelledby="cross-figcaption">
-          <img
-            src="gemini-5-clean.webp"
-            alt="2026 Subaru Crosstrek interior at sunrise: 11.6-inch portrait touchscreen, flat-bottom steering wheel, and the stereo-camera EyeSight mount visible at the windshield."
-            width="2848"
-            height="1502"
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption id="cross-figcaption" class="sr-only">2026 Subaru Crosstrek interior, 11.6-inch portrait touchscreen and EyeSight stereo-camera at the windshield. Image courtesy of Subaru of America.</figcaption>
-        </figure>
 
         <h3>Driver assists by trim.</h3>
         <p>The most meaningful jump in driver-assist content typically happens at the Limited trim on both vehicles. Blind-Spot Detection, Rear Cross-Traffic Alert, and Reverse Automatic Braking are commonly bundled there [PENDING: confirm exact 2026 MY trim-walk by feature]. If those features matter to you, and for active retirees they often do, start your trim comparison at Limited.</p>
@@ -1473,6 +1480,18 @@
           <li><strong>Bilingual sales support (English / Spanish) on the showroom floor</strong> · Findlay Subaru Prescott: Gabriel Madel (Product Specialist) on Sales; Jesus Soria on Service</li>
         </ul>
         <p>If you're weighing the Forester against the new Forester Hybrid, our <a href="/subaru-forester-hybrid-prescott">Subaru Forester Hybrid for Prescott</a> explainer covers that internal call.</p>
+
+        <figure class="full-img" aria-labelledby="closing-figcaption">
+          <img
+            src="f-subaru-prescott-3.webp"
+            alt="2026 Subaru Crosstrek interior at sunrise: 11.6-inch portrait touchscreen, flat-bottom steering wheel, and the high-desert view from the driver's seat."
+            width="2848"
+            height="1502"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption id="closing-figcaption" class="sr-only">2026 Subaru Crosstrek interior. Image courtesy of Subaru of America.</figcaption>
+        </figure>
       </section>
     </div>
 
